@@ -70,17 +70,17 @@ rwh_05 = { package = "raw-window-handle", version = "0.5.2", features = [
 ] }
 rwh_06 = { package = "raw-window-handle", version = "0.6", features = ["std"] }
 
-iced = { git = "https://github.com/iced-rs/iced.git", default-features = false }
-iced_runtime = { git = "https://github.com/iced-rs/iced.git" }
+iced = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7", default-features = false }
+iced_runtime = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7" }
 #iced_style = "0.13"
-iced_core = { git = "https://github.com/iced-rs/iced.git" }
-iced_program = { git = "https://github.com/iced-rs/iced.git" }
-iced_renderer = { git = "https://github.com/iced-rs/iced.git" }
-iced_futures = { git = "https://github.com/iced-rs/iced.git" }
-iced_graphics = { git = "https://github.com/iced-rs/iced.git" }
-iced_debug = { git = "https://github.com/iced-rs/iced.git" }
-iced_devtools = { git = "https://github.com/iced-rs/iced.git" }
-iced_widget = { git = "https://github.com/iced-rs/iced.git" }
+iced_core = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7" }
+iced_program = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7" }
+iced_renderer = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7" }
+iced_futures = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7" }
+iced_graphics = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7" }
+iced_debug = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7" }
+iced_devtools = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7" }
+iced_widget = { git = "https://github.com/iced-rs/iced.git", rev = "8bfd099c5929d927a3fdde666d4c645d0bd83cb7" }
 window_clipboard = "0.4.1"
 
 bitflags = "2.9.0"
