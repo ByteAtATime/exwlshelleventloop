@@ -51,6 +51,13 @@ pub struct Settings {
     ///
     pub antialiasing: bool,
 
+    /// Whether or not to attempt to synchronize rendering when possible.
+    ///
+    /// Disabling it can improve rendering performance on some platforms.
+    ///
+    /// By default, it is enabled.
+    pub vsync: bool,
+
     pub virtual_keyboard_support: Option<VirtualKeyboardSettings>,
 
     /// set the used wayland connection, all wayland object will share it, and they can be used by
@@ -66,6 +73,7 @@ impl Default for Settings {
             default_font: Font::default(),
             default_text_size: Pixels(16.0),
             antialiasing: false,
+            vsync: true,
             virtual_keyboard_support: None,
             with_connection: None,
         }
@@ -113,6 +121,7 @@ mod tests {
         assert_eq!(settings.default_text_size, Pixels(16.0));
         assert!(!settings.antialiasing);
         assert!(settings.virtual_keyboard_support.is_none());
+        assert!(settings.vsync);
 
         // Test default layershellv settings
         assert_eq!(

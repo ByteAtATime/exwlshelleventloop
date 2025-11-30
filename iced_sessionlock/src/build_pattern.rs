@@ -617,6 +617,7 @@ mod pattern {
                 } else {
                     None
                 },
+                vsync: settings.vsync,
             };
             crate::multi_window::run(program, settings, renderer_settings)
         }
@@ -630,6 +631,17 @@ mod pattern {
             Self {
                 settings: Settings {
                     antialiasing,
+                    ..self.settings
+                },
+                ..self
+            }
+        }
+
+        /// Sets whether vsync should be enabled for the [`Application`].
+        pub fn vsync(self, vsync: bool) -> Self {
+            Self {
+                settings: Settings {
+                    vsync,
                     ..self.settings
                 },
                 ..self

@@ -682,6 +682,7 @@ impl<P: Program> Daemon<P> {
             } else {
                 None
             },
+            vsync: settings.vsync,
         };
         use layershellev::StartMode;
         assert!(
@@ -701,6 +702,16 @@ impl<P: Program> Daemon<P> {
         Self {
             settings: Settings {
                 antialiasing,
+                ..self.settings
+            },
+            ..self
+        }
+    }
+    /// Sets whether vsync should be enabled for the [`Daemon`].
+    pub fn vsync(self, vsync: bool) -> Self {
+        Self {
+            settings: Settings {
+                vsync,
                 ..self.settings
             },
             ..self

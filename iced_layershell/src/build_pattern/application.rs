@@ -599,6 +599,7 @@ impl<P: Program> SingleApplication<P> {
             } else {
                 None
             },
+            vsync: settings.vsync,
             ..iced_graphics::Settings::default()
         };
         use layershellev::StartMode;
@@ -620,6 +621,14 @@ impl<P: Program> SingleApplication<P> {
                 antialiasing,
                 ..self.settings
             },
+            ..self
+        }
+    }
+
+    /// Sets whether vsync should be enabled for the [`SingleApplication`].
+    pub fn vsync(self, vsync: bool) -> Self {
+        Self {
+            settings: Settings { vsync, ..self.settings },
             ..self
         }
     }

@@ -34,6 +34,13 @@ pub struct Settings {
     /// By default, it is disabled.
     ///
     pub antialiasing: bool,
+
+    /// Whether or not to attempt to synchronize rendering when possible.
+    ///
+    /// Disabling it can improve rendering performance on some platforms.
+    ///
+    /// By default, it is enabled.
+    pub vsync: bool,
     /// set the used wayland connection, all wayland object will share it, and they can be used by
     /// each other.
     pub with_connection: Option<Connection>,
@@ -46,6 +53,7 @@ impl Default for Settings {
             default_font: Font::default(),
             default_text_size: Pixels(16.0),
             antialiasing: false,
+            vsync: true,
             with_connection: None,
         }
     }
