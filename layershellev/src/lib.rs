@@ -2809,7 +2809,7 @@ impl<T: 'static> WindowState<T> {
         event_loop
             .handle()
             .insert_source(
-                Timer::from_duration(Duration::from_millis(50)),
+                Timer::from_duration(Duration::from_millis(16)),
                 move |_, _, r_window_state| {
                     let window_state = &mut r_window_state.raw;
                     let event_handler = &mut r_window_state.fun;
@@ -3350,7 +3350,7 @@ impl<T: 'static> WindowState<T> {
                             window_state.units[idx].reset_present_slot();
                         }
                     }
-                    TimeoutAction::ToDuration(std::time::Duration::from_millis(50))
+                    TimeoutAction::ToDuration(std::time::Duration::from_millis(16))
                 },
             )
             .expect("Cannot insert_source");
